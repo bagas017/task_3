@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    background-image: url('Asset/Pict/bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat; 
+}
+
+nav ul li:hover{
+    background-color: rgba(45, 41, 38, 0.61);
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-social li {
+    margin: 0 10px;
+}
+
+.footer-social li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-social li a:hover {
+    color: #ccc;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #777;
+}
+
+.profile-pic{
+    margin-bottom: 30px;
+}
+
+.profile-pic-img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-me{
+    background: linear-gradient(156deg, rgba(0,5,10,0.5) 0%, rgba(33, 177, 196, 0.5) 43%, rgba(255,250,233,0.8) 91%);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.about-me-text, .about-me h2, .about-me p{
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.video-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+.video-content{
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    max-width: 560px;
+    max-height: 315px;
+    aspect-ratio: 16/9;
+    margin: auto;
+}
+
+.myskills{
+    background: rgb(3,21,23);
+    background: linear-gradient(49deg, rgba(3, 21, 23, 0.752) 0%, rgba(80, 150, 146, 0.736) 26%, rgba(203, 203, 203, 0.818) 38%, rgba(255, 250, 233, 0.895) 63%);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.my-skills-container{
+    display: grid;
+    border: 1.5px rgb(255, 255, 255) solid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+    gap: 15px;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.my-skills-container ul li{
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    line-height: 1.5;
+}
+
+.my-skills-container h3{
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.myskills h2{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.MS, .comp, .graph, .web, .lang{
+    background-image: url('Asset/Pict/bg-card.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* PC */
+@media only screen and (min-width:769px){
+    body{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 20% 1fr 1fr 1fr;
+        grid-template-rows: 5fr 1fr;
+        grid-template-areas:
+        "sidebar main main main"
+        "footer footer footer footer";
+        grid-gap: 0.2rem;
+    }
+    
+    .sidebar{
+        grid-area: sidebar;
+        background-color: rgba(230, 211, 194, 0.871);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-content: start;
+    }
+     
+    .profile-section{
+        background-image: url('Asset/Pict/bg3.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        color: rgba(0, 0, 0, 0.796);
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav ul, nav ul li a{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li{
+        border-bottom: white 1px solid;
+        background-color: rgba(82, 76, 72, 0.084);
+        padding: 10px;
+        text-align: left;
+        line-height: 2;
+    }
+
+    .main{
+        grid-area: main;
+        height: auto;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #131313a1;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width:481px) and (max-width:768px){
+    body{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "main"
+        "sidebar"
+        "footer";
+        grid-gap: 0.2rem;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .sidebar{
+        grid-area: sidebar;
+        height: auto;
+        padding-bottom: 20px;
+        background-color: rgba(230, 211, 194, 0.878);
+    }
+
+    .profile-section{
+        background-image: url('Asset/Pict/bg3.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        color: rgba(0, 0, 0, 0.796);
+        height: 150px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul, nav ul li a{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    nav ul li{
+        background-color: rgba(82, 76, 72, 0.084);
+        display: inline;
+        padding: 10px;
+        text-align: left;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #131313a1;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* HP */
+@media only screen and (max-width: 500px){
+
+    body{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "main"
+        "sidebar"
+        "footer";
+        grid-gap: 0.2rem;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .sidebar{
+        grid-area: sidebar;
+        height: auto;
+        padding-bottom: 20px;
+        background-color: rgba(230, 211, 194, 0.878);
+    }
+
+    .profile-section{
+        background-image: url('Asset/Pict/bg3.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        color: rgba(0, 0, 0, 0.796);
+        height: 150px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul, nav ul li a{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    nav ul li{
+        background-color: rgba(82, 76, 72, 0.084);
+        display: inline;
+        padding: 10px;
+        text-align: left;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #131313a1;
+        padding: 20px;
+        text-align: center;
+    }
+}
