@@ -135,7 +135,7 @@ nav ul li:hover{
 }
 
 /* PC */
-@media only screen and (min-width:769px){
+@media only screen and (min-width:1025px){
     body{
         display: grid;
         height: 100vh;
@@ -149,7 +149,8 @@ nav ul li:hover{
     
     .sidebar{
         grid-area: sidebar;
-        background-color: rgba(230, 211, 194, 0.871);
+        background: rgb(226,201,179);
+        background: linear-gradient(180deg, rgb(177, 139, 106) 0%, rgb(182, 155, 132) 18%, rgba(255, 250, 233, 0.633) 61%);
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -199,7 +200,7 @@ nav ul li:hover{
 }
 
 /* Tablet */
-@media only screen and (min-width:481px) and (max-width:768px){
+@media only screen and (min-width:768px) and (max-width:1024px){
     body{
         display: grid;
         height: 100vh;
@@ -220,7 +221,7 @@ nav ul li:hover{
         grid-area: sidebar;
         height: auto;
         padding-bottom: 20px;
-        background-color: rgba(230, 211, 194, 0.878);
+        background: linear-gradient(180deg, rgb(177, 139, 106) 0%, rgb(182, 155, 132) 18%, rgba(255, 250, 233, 0.633) 61%);
     }
 
     .profile-section{
@@ -267,7 +268,7 @@ nav ul li:hover{
 }
 
 /* HP */
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 767px){
 
     body{
         display: grid;
@@ -289,7 +290,7 @@ nav ul li:hover{
         grid-area: sidebar;
         height: auto;
         padding-bottom: 20px;
-        background-color: rgba(230, 211, 194, 0.878);
+        background: linear-gradient(180deg, rgb(177, 139, 106) 0%, rgb(182, 155, 132) 18%, rgba(255, 250, 233, 0.633) 61%);
     }
 
     .profile-section{
